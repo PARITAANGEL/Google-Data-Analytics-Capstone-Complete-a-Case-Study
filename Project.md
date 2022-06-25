@@ -97,7 +97,7 @@ df11<-read.csv("~/pari/rdata/202102-divvy-tripdata.csv")
 df12<-read.csv("~/pari/rdata/202103-divvy-tripdata.csv")
 ```
 
-# **collection and cleaning of Data**   
+# **Collection and Cleaning of Data**   
 
 All files have same  data type and order of column that's why we have combined all files into one file and we get 34,89,748 rows and 13 columns. In the first step of preparation, we have removed dirty data by removing empty rows and columns. I have detached the duplicate from ride_id to make it clean data.    
 
@@ -261,7 +261,7 @@ head(biketype_station_id,10)
 **There is the top ten station name used by the casual rider**
 
 
-### conclusion ###
+### Conclusion ###
 
 This data have some limitation because of lack of information such as what is the reason rider avoid cycle riding on weekdays, why to dislike electric and docked bike by riders and so on. we get some misleading data like negative trip duration. In my opinion, we should collect more data for better data decision making. further that I removed dirty data and prepare it for aggregation, manipulation and analysis.  
 
