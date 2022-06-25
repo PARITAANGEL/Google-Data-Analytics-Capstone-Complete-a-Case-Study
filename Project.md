@@ -1,6 +1,6 @@
 ---
-title: "Cyclistic Case Study - Google Data Analytics Course"
-output: html_notebook
+Title: "Cyclistic Case Study - Google Data Analytics Course"
+Output: html_notebook
 ---
 
 ### **INTRODUCTION**
@@ -174,6 +174,7 @@ ggplot(data=monthlygroup_duration,aes(x=month_year,y=number_of_ride))+
   xlab("Monthly Ride from 2020-21")+ylab("Numer of Ride")
 
 ```
+![alt text](1.png)
 
 In the next step, I have defined the minimum, maximum, median, and mean value of trip duration by the summary function. It can be seen that the highest trips have done in around 40 days, instead, some of the customers have zero trip duration. It is some limitation of data because zero trip duration is hard to possible.    
 
@@ -185,6 +186,8 @@ summary(bike_ride2$trip_duration)
 - This path graph also gives supports the statement that the trip duration of casual riders is three times greater than the trip duration of member riders. The trade of casual trip duration fluctuated and the trend of membertrip duration was slowly fallen.
 
 - By analysing the path graph, member riders do ride for work purposes and casual riders do ride for leisure time.
+
+![alt text](2.png)
 
 ```{r}
 ggplot(data=monthlygroup_duration,aes(x=month_year,y=average_duration,group=member_casual))+geom_path(aes(color=member_casual))+geom_point(aes(color=member_casual))+theme(axis.text.x = element_text(angle = 60))+labs(title="Average of time by Ride Type from 2020_21",subtitle = "Monthly",fill="Rider_type")+xlab("Annual with Month")+ylab("Average duration(min)")
@@ -217,6 +220,8 @@ ggplot()+
 
 ```
 
+![alt text](3.png)
+
 - The bar graph indicates rides of different bike types between casual and member riders. It is clear that the classic bike has became very popular with both types of riders than docked and electric bikes. Electric and ducked bikes have demanded around 50k in members, which is almost double that of casual riders.     
 
 - By using this plot, we can keep stock of different bikes as per requirement and we should find the reason for this drastic difference between usage of bike rides.
@@ -239,6 +244,7 @@ ggplot(data=member_casual_ridetype,aes(x=weekday,y=number_of_rides,fill=rideable
   scale_fill_manual(values = c('green','blue','red'))
 ```
 
+![alt text](4.png)
 
 ```{r}
 
@@ -249,6 +255,8 @@ head(biketype_station_id,10)
 
 
 ```    
+
+![alt text](5.png)
 
 **There is the top ten station name used by the casual rider**
 
